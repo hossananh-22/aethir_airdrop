@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" style="" data-scrapbook-source="https://airdrop.aethir.com/" data-scrapbook-create="20241114155349122"
+  data-scrapbook-adoptedstylesheet-0=":host { z-index: var(--w3m-z-index); display: block; backface-visibility: hidden; position: fixed; inset: 0px; pointer-events: none; opacity: 0; background-color: var(--wui-cover); transition: opacity 0.2s var(--wui-ease-out-power-2); will-change: opacity; }
+
+:host(.open) { opacity: 1; }
+
+@keyframes zoom-in {
+  0% { transform: scale(0.95) translateY(0px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+@keyframes slide-in {
+  0% { transform: scale(1) translateY(50px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+wui-card { max-width: var(--w3m-modal-width); width: 100%; position: relative; animation-duration: 0.2s; animation-name: zoom-in; animation-fill-mode: backwards; animation-timing-function: var(--wui-ease-out-power-2); outline: none; }
+
+wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+
+@media (max-height: 700px) and (min-width: 431px) {
+  wui-flex { align-items: flex-start; }
+  wui-card { margin: var(--wui-spacing-xxl) 0px; }
+}
+
+@media (max-width: 430px) {
+  wui-flex { align-items: flex-end; }
+  wui-card { max-width: 100%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-bottom: none; animation-name: slide-in; }
+}">
+
+<head>
+  <link rel="stylesheet" href="4b335fd577eebb35.css" data-precedence="next">
+  <link rel="stylesheet" href="f7042c2b1d6521b2.css" data-precedence="next">
+  <style>
+    @import url("css2.css");
+
+    :root {
+      --w3m-modal-width: 360px;
+      --w3m-color-mix-strength: 0%;
+      --w3m-font-family: Inter, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      ;
+      --w3m-font-size-master: 10px;
+      --w3m-border-radius-master: 4px;
+      --w3m-z-index: 999;
+
+      --wui-font-family: var(--w3m-font-family);
+
+      --wui-font-size-mini: calc(var(--w3m-font-size-master) * 0.8);
+      --wui-font-size-micro: var(--w3m-font-size-master);
+      --wui-font-size-tiny: calc(var(--w3m-font-size-master) * 1.2);
+      --wui-font-size-small: calc(var(--w3m-font-size-master) * 1.4);
+      --wui-font-size-paragraph: calc(var(--w3m-font-size-master) * 1.6);
+      --wui-font-size-medium: calc(var(--w3m-font-size-master) * 1.8);
+      --wui-font-size-large: calc(var(--w3m-font-size-master) * 2);
+      --wui-font-size-medium-title: calc(var(--w3m-font-size-master) * 2.4);
+      --wui-font-size-2xl: calc(var(--w3m-font-size-master) * 4);
+
+      --wui-border-radius-5xs: var(--w3m-border-radius-master);
+      --wui-border-radius-4xs: calc(var(--w3m-border-radius-master) * 1.5);
+      --wui-border-radius-3xs: calc(var(--w3m-border-radius-master) * 2);
+      --wui-border-radius-xxs: calc(var(--w3m-border-radius-master) * 3);
+      --wui-border-radius-xs: calc(var(--w3m-border-radius-master) * 4);
+      --wui-border-radius-s: calc(var(--w3m-border-radius-master) * 5);
+      --wui-border-radius-m: calc(var(--w3m-border-radius-master) * 7);
+      --wui-border-radius-l: calc(var(--w3m-border-radius-master) * 9);
+      --wui-border-radius-3xl: calc(var(--w3m-border-radius-master) * 20);
+
+      --wui-font-weight-light: 400;
+      --wui-font-weight-regular: 500;
+      --wui-font-weight-medium: 600;
+      --wui-font-weight-bold: 700;
+
+      --wui-letter-spacing-2xl: -1.6px;
+      --wui-letter-spacing-medium-title: -0.96px;
+      --wui-letter-spacing-large: -0.8px;
+      --wui-letter-spacing-medium: -0.72px;
+      --wui-letter-spacing-paragraph: -0.64px;
+      --wui-letter-spacing-small: -0.56px;
+      --wui-letter-spacing-tiny: -0.48px;
+      --wui-letter-spacing-micro: -0.2px;
+      --wui-letter-spacing-mini: -0.16px;
+
+      --wui-spacing-0: 0px;
+      --wui-spacing-4xs: 2px;
+      --wui-spacing-3xs: 4px;
+      --wui-spacing-xxs: 6px;
+      --wui-spacing-2xs: 7px;
+      --wui-spacing-xs: 8px;
+      --wui-spacing-1xs: 10px;
+      --wui-spacing-s: 12px;
+      --wui-spacing-m: 14px;
+      --wui-spacing-l: 16px;
+      --wui-spacing-2l: 18px;
+      --wui-spacing-xl: 20px;
+      --wui-spacing-xxl: 24px;
+      --wui-spacing-2xl: 32px;
+      --wui-spacing-3xl: 40px;
+      --wui-spacing-4xl: 90px;
+      --wui-spacing-5xl: 95px;
+
+      --wui-icon-box-size-xxs: 14px;
+      --wui-icon-box-size-xs: 20px;
+      --wui-icon-box-size-sm: 24px;
+      --wui-icon-box-size-md: 32px;
+      --wui-icon-box-size-lg: 40px;
+      --wui-icon-box-size-xl: 64px;
+
+      --wui-icon-size-inherit: inherit;
+      --wui-icon-size-xxs: 10px;
+      --wui-icon-size-xs: 12px;
+      --wui-icon-size-sm: 14px;
+      --wui-icon-size-md: 16px;
+      --wui-icon-size-mdl: 18px;
+      --wui-icon-size-lg: 20px;
+      --wui-icon-size-xl: 24px;
+      --wui-icon-size-xxl: 28px;
+
+      --wui-wallet-image-size-inherit: inherit;
+      --wui-wallet-image-size-sm: 40px;
+      --wui-wallet-image-size-md: 56px;
+      --wui-wallet-image-size-lg: 80px;
+
+      --wui-visual-size-size-inherit: inherit;
+      --wui-visual-size-sm: 40px;
+      --wui-visual-size-md: 55px;
+      --wui-visual-size-lg: 80px;
+
+      --wui-box-size-md: 100px;
+      --wui-box-size-lg: 120px;
+
+      --wui-ease-out-power-2: cubic-bezier(0, 0, 0.22, 1);
+      --wui-ease-out-power-1: cubic-bezier(0, 0, 0.55, 1);
+
+      --wui-ease-in-power-3: cubic-bezier(0.66, 0, 1, 1);
+      --wui-ease-in-power-2: cubic-bezier(0.45, 0, 1, 1);
+      --wui-ease-in-power-1: cubic-bezier(0.3, 0, 1, 1);
+
+      --wui-ease-inout-power-1: cubic-bezier(0.45, 0, 0.55, 1);
+
+      --wui-duration-lg: 200ms;
+      --wui-duration-md: 125ms;
+      --wui-duration-sm: 75ms;
+
+      --wui-path-network-sm: path('M15.4 2.1a5.21 5.21 0 0 1 5.2 0l11.61 6.7a5.21 5.21 0 0 1 2.61 4.52v13.4c0 1.87-1 3.59-2.6 4.52l-11.61 6.7c-1.62.93-3.6.93-5.22 0l-11.6-6.7a5.21 5.21 0 0 1-2.61-4.51v-13.4c0-1.87 1-3.6 2.6-4.52L15.4 2.1Z'
+        );
+
+      --wui-path-network-md: path('M43.4605 10.7248L28.0485 1.61089C25.5438 0.129705 22.4562 0.129705 19.9515 1.61088L4.53951 10.7248C2.03626 12.2051 0.5 14.9365 0.5 17.886V36.1139C0.5 39.0635 2.03626 41.7949 4.53951 43.2752L19.9515 52.3891C22.4562 53.8703 25.5438 53.8703 28.0485 52.3891L43.4605 43.2752C45.9637 41.7949 47.5 39.0635 47.5 36.114V17.8861C47.5 14.9365 45.9637 12.2051 43.4605 10.7248Z'
+        );
+
+      --wui-path-network-lg: path('M78.3244 18.926L50.1808 2.45078C45.7376 -0.150261 40.2624 -0.150262 35.8192 2.45078L7.6756 18.926C3.23322 21.5266 0.5 26.3301 0.5 31.5248V64.4752C0.5 69.6699 3.23322 74.4734 7.6756 77.074L35.8192 93.5492C40.2624 96.1503 45.7376 96.1503 50.1808 93.5492L78.3244 77.074C82.7668 74.4734 85.5 69.6699 85.5 64.4752V31.5248C85.5 26.3301 82.7668 21.5266 78.3244 18.926Z'
+        );
+
+      --wui-width-network-sm: 36px;
+      --wui-width-network-md: 48px;
+      --wui-width-network-lg: 86px;
+
+      --wui-height-network-sm: 40px;
+      --wui-height-network-md: 54px;
+      --wui-height-network-lg: 96px;
+
+      --wui-icon-size-network-xs: 12px;
+      --wui-icon-size-network-sm: 16px;
+      --wui-icon-size-network-md: 24px;
+      --wui-icon-size-network-lg: 42px;
+
+      --wui-color-inherit: inherit;
+
+      --wui-color-inverse-100: #fff;
+      --wui-color-inverse-000: #000;
+
+      --wui-cover: rgba(20, 20, 20, 0.8);
+
+      --wui-color-modal-bg: var(--wui-color-modal-bg-base);
+
+      --wui-color-accent-100: var(--wui-color-accent-base-100);
+      --wui-color-accent-090: var(--wui-color-accent-base-090);
+      --wui-color-accent-080: var(--wui-color-accent-base-080);
+
+      --wui-color-success-100: var(--wui-color-success-base-100);
+
+      --wui-color-error-100: var(--wui-color-error-base-100);
+
+      --wui-icon-box-bg-error-100: var(--wui-icon-box-bg-error-base-100);
+      --wui-icon-box-bg-blue-100: var(--wui-icon-box-bg-blue-base-100);
+      --wui-icon-box-bg-success-100: var(--wui-icon-box-bg-success-base-100);
+      --wui-icon-box-bg-inverse-100: var(--wui-icon-box-bg-inverse-base-100);
+
+      --wui-all-wallets-bg-100: var(--wui-all-wallets-bg-100);
+
+      --wui-avatar-border: var(--wui-avatar-border-base);
+
+      --wui-thumbnail-border: var(--wui-thumbnail-border-base);
+
+      --wui-box-shadow-blue: var(--wui-color-accent-glass-020);
+    }
+
+    @supports (background: color-mix(in srgb, white 50%, black)) {
+      :root {
+        --wui-color-modal-bg: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-modal-bg-base));
+
+        --wui-box-shadow-blue: color-mix(in srgb, var(--wui-color-accent-100) 20%, transparent);
+
+        --wui-color-accent-100: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 100%,
+            transparent);
+        --wui-color-accent-090: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            transparent);
+        --wui-color-accent-080: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            transparent);
+        --wui-color-accent-glass-090: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            transparent);
+        --wui-color-accent-glass-080: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            transparent);
+        --wui-color-accent-glass-020: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 20%,
+            transparent);
+        --wui-color-accent-glass-015: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 15%,
+            transparent);
+        --wui-color-accent-glass-010: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 10%,
+            transparent);
+        --wui-color-accent-glass-005: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 5%,
+            transparent);
+        --wui-color-accent-002: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 2%,
+            transparent);
+
+        --wui-color-fg-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-100));
+        --wui-color-fg-125: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-125));
+        --wui-color-fg-150: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-150));
+        --wui-color-fg-175: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-175));
+        --wui-color-fg-200: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-200));
+        --wui-color-fg-225: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-225));
+        --wui-color-fg-250: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-250));
+        --wui-color-fg-275: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-275));
+        --wui-color-fg-300: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-300));
+
+        --wui-color-bg-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-100));
+        --wui-color-bg-125: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-125));
+        --wui-color-bg-150: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-150));
+        --wui-color-bg-175: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-175));
+        --wui-color-bg-200: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-200));
+        --wui-color-bg-225: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-225));
+        --wui-color-bg-250: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-250));
+        --wui-color-bg-275: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-275));
+        --wui-color-bg-300: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-300));
+
+        --wui-color-success-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-success-base-100));
+        --wui-color-error-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-error-base-100));
+
+        --wui-icon-box-bg-error-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-error-base-100));
+        --wui-icon-box-bg-accent-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-blue-base-100));
+        --wui-icon-box-bg-success-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-success-base-100));
+        --wui-icon-box-bg-inverse-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-inverse-base-100));
+
+        --wui-all-wallets-bg-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-all-wallets-bg-100));
+
+        --wui-avatar-border: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-avatar-border-base));
+
+        --wui-thumbnail-border: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-thumbnail-border-base));
+      }
+    }
+  </style>
+  <style media="enabled">
+    :root {
+      --w3m-color-mix: #000;
+      --w3m-accent: hsla(231, 100%, 70%, 1);
+      --w3m-default: #000;
+
+      --wui-color-modal-bg-base: #fff;
+      --wui-color-accent-base-100: var(--w3m-accent);
+
+      --wui-color-blueberry-100: hsla(231, 100%, 70%, 1);
+      --wui-color-blueberry-090: hsla(231, 97%, 72%, 1);
+      --wui-color-blueberry-080: hsla(231, 92%, 74%, 1);
+
+      --wui-color-fg-100: #141414;
+      --wui-color-fg-125: #2d3131;
+      --wui-color-fg-150: #474d4d;
+      --wui-color-fg-175: #636d6d;
+      --wui-color-fg-200: #798686;
+      --wui-color-fg-225: #828f8f;
+      --wui-color-fg-250: #8b9797;
+      --wui-color-fg-275: #95a0a0;
+      --wui-color-fg-300: #9ea9a9;
+
+      --wui-color-bg-100: #ffffff;
+      --wui-color-bg-125: #f5fafa;
+      --wui-color-bg-150: #f3f8f8;
+      --wui-color-bg-175: #eef4f4;
+      --wui-color-bg-200: #eaf1f1;
+      --wui-color-bg-225: #e5eded;
+      --wui-color-bg-250: #e1e9e9;
+      --wui-color-bg-275: #dce7e7;
+      --wui-color-bg-300: #d8e3e3;
+
+      --wui-color-success-base-100: #26b562;
+      --wui-color-error-base-100: #f05142;
+
+      --wui-color-success-glass-001: rgba(38, 181, 98, 0.01);
+      --wui-color-success-glass-002: rgba(38, 181, 98, 0.02);
+      --wui-color-success-glass-005: rgba(38, 181, 98, 0.05);
+      --wui-color-success-glass-010: rgba(38, 181, 98, 0.1);
+      --wui-color-success-glass-015: rgba(38, 181, 98, 0.15);
+      --wui-color-success-glass-020: rgba(38, 181, 98, 0.2);
+      --wui-color-success-glass-025: rgba(38, 181, 98, 0.25);
+      --wui-color-success-glass-030: rgba(38, 181, 98, 0.3);
+      --wui-color-success-glass-060: rgba(38, 181, 98, 0.6);
+      --wui-color-success-glass-080: rgba(38, 181, 98, 0.8);
+
+      --wui-color-error-glass-001: rgba(240, 81, 66, 0.01);
+      --wui-color-error-glass-002: rgba(240, 81, 66, 0.02);
+      --wui-color-error-glass-005: rgba(240, 81, 66, 0.05);
+      --wui-color-error-glass-010: rgba(240, 81, 66, 0.1);
+      --wui-color-error-glass-015: rgba(240, 81, 66, 0.15);
+      --wui-color-error-glass-020: rgba(240, 81, 66, 0.2);
+      --wui-color-error-glass-025: rgba(240, 81, 66, 0.25);
+      --wui-color-error-glass-030: rgba(240, 81, 66, 0.3);
+      --wui-color-error-glass-060: rgba(240, 81, 66, 0.6);
+      --wui-color-error-glass-080: rgba(240, 81, 66, 0.8);
+
+      --wui-icon-box-bg-error-base-100: #f4dfdd;
+      --wui-icon-box-bg-blue-base-100: #d9ecfb;
+      --wui-icon-box-bg-success-base-100: #daf0e4;
+      --wui-icon-box-bg-inverse-base-100: #dcecfc;
+
+      --wui-all-wallets-bg-100: #e8f1fa;
+
+      --wui-avatar-border-base: #f3f4f4;
+
+      --wui-thumbnail-border-base: #eaefef;
+
+      --wui-color-gray-glass-001: rgba(0, 0, 0, 0.01);
+      --wui-color-gray-glass-002: rgba(0, 0, 0, 0.02);
+      --wui-color-gray-glass-005: rgba(0, 0, 0, 0.05);
+      --wui-color-gray-glass-010: rgba(0, 0, 0, 0.1);
+      --wui-color-gray-glass-015: rgba(0, 0, 0, 0.15);
+      --wui-color-gray-glass-020: rgba(0, 0, 0, 0.2);
+      --wui-color-gray-glass-025: rgba(0, 0, 0, 0.25);
+      --wui-color-gray-glass-030: rgba(0, 0, 0, 0.3);
+      --wui-color-gray-glass-060: rgba(0, 0, 0, 0.6);
+      --wui-color-gray-glass-080: rgba(0, 0, 0, 0.8);
+      --wui-color-gray-glass-090: rgba(0, 0, 0, 0.9);
+    }
+  </style>
+  <style>
+    :root {
+      --w3m-color-mix: #fff;
+      --w3m-accent: hsla(230, 100%, 67%, 1);
+      --w3m-default: #fff;
+
+      --wui-color-modal-bg-base: #121313;
+      --wui-color-accent-base-100: var(--w3m-accent);
+
+      --wui-color-blueberry-100: hsla(230, 100%, 67%, 1);
+      --wui-color-blueberry-090: hsla(231, 76%, 61%, 1);
+      --wui-color-blueberry-080: hsla(230, 59%, 55%, 1);
+
+      --wui-color-fg-100: #e4e7e7;
+      --wui-color-fg-125: #d0d5d5;
+      --wui-color-fg-150: #a8b1b1;
+      --wui-color-fg-175: #a8b0b0;
+      --wui-color-fg-200: #949e9e;
+      --wui-color-fg-225: #868f8f;
+      --wui-color-fg-250: #788080;
+      --wui-color-fg-275: #788181;
+      --wui-color-fg-300: #6e7777;
+
+      --wui-color-bg-100: #141414;
+      --wui-color-bg-125: #191a1a;
+      --wui-color-bg-150: #1e1f1f;
+      --wui-color-bg-175: #222525;
+      --wui-color-bg-200: #272a2a;
+      --wui-color-bg-225: #2c3030;
+      --wui-color-bg-250: #313535;
+      --wui-color-bg-275: #363b3b;
+      --wui-color-bg-300: #3b4040;
+
+      --wui-color-success-base-100: #26d962;
+      --wui-color-error-base-100: #f25a67;
+
+      --wui-color-success-glass-001: rgba(38, 217, 98, 0.01);
+      --wui-color-success-glass-002: rgba(38, 217, 98, 0.02);
+      --wui-color-success-glass-005: rgba(38, 217, 98, 0.05);
+      --wui-color-success-glass-010: rgba(38, 217, 98, 0.1);
+      --wui-color-success-glass-015: rgba(38, 217, 98, 0.15);
+      --wui-color-success-glass-020: rgba(38, 217, 98, 0.2);
+      --wui-color-success-glass-025: rgba(38, 217, 98, 0.25);
+      --wui-color-success-glass-030: rgba(38, 217, 98, 0.3);
+      --wui-color-success-glass-060: rgba(38, 217, 98, 0.6);
+      --wui-color-success-glass-080: rgba(38, 217, 98, 0.8);
+
+      --wui-color-error-glass-001: rgba(242, 90, 103, 0.01);
+      --wui-color-error-glass-002: rgba(242, 90, 103, 0.02);
+      --wui-color-error-glass-005: rgba(242, 90, 103, 0.05);
+      --wui-color-error-glass-010: rgba(242, 90, 103, 0.1);
+      --wui-color-error-glass-015: rgba(242, 90, 103, 0.15);
+      --wui-color-error-glass-020: rgba(242, 90, 103, 0.2);
+      --wui-color-error-glass-025: rgba(242, 90, 103, 0.25);
+      --wui-color-error-glass-030: rgba(242, 90, 103, 0.3);
+      --wui-color-error-glass-060: rgba(242, 90, 103, 0.6);
+      --wui-color-error-glass-080: rgba(242, 90, 103, 0.8);
+
+      --wui-color-gray-glass-001: rgba(255, 255, 255, 0.01);
+      --wui-color-gray-glass-002: rgba(255, 255, 255, 0.02);
+      --wui-color-gray-glass-005: rgba(255, 255, 255, 0.05);
+      --wui-color-gray-glass-010: rgba(255, 255, 255, 0.1);
+      --wui-color-gray-glass-015: rgba(255, 255, 255, 0.15);
+      --wui-color-gray-glass-020: rgba(255, 255, 255, 0.2);
+      --wui-color-gray-glass-025: rgba(255, 255, 255, 0.25);
+      --wui-color-gray-glass-030: rgba(255, 255, 255, 0.3);
+      --wui-color-gray-glass-060: rgba(255, 255, 255, 0.6);
+      --wui-color-gray-glass-080: rgba(255, 255, 255, 0.8);
+      --wui-color-gray-glass-090: rgba(255, 255, 255, 0.9);
+
+      --wui-icon-box-bg-error-base-100: #3c2426;
+      --wui-icon-box-bg-blue-base-100: #20303f;
+      --wui-icon-box-bg-success-base-100: #1f3a28;
+      --wui-icon-box-bg-inverse-base-100: #243240;
+
+      --wui-all-wallets-bg-100: #222b35;
+
+      --wui-avatar-border-base: #252525;
+
+      --wui-thumbnail-border-base: #252525;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Aethir Cloud Drop</title>
+  <meta name="description" content="Complete tasks, refer your network, and rise up the Aethir Cloud Drop leaderboard!">
+  <meta property="og:title" content="Aethir Cloud Drop">
+  <meta property="og:description"
+    content="Complete tasks, refer your network, and rise up the Aethir Cloud Drop leaderboard!">
+  <meta property="og:site_name" content="Aethir Cloud Drop">
+  <meta property="og:image" content="https://airdrop.aethir.com/images/opengraph-image.png">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Aethir Cloud Drop">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@AethirCloud">
+  <meta name="twitter:creator" content="@AethirCloud">
+  <meta name="twitter:title" content="Aethir Cloud Drop">
+  <meta name="twitter:description"
+    content="Complete tasks, refer your network, and rise up the Aethir Cloud Drop leaderboard!">
+  <meta name="twitter:image" content="https://airdrop.aethir.com/images/opengraph-image.png">
+  <meta name="twitter:image:alt" content="Aethir Cloud Drop">
+  <meta name="twitter:image:width" content="1600">
+  <meta name="twitter:image:height" content="800">
+  <meta name="next-size-adjust">
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+
+<body class="__className_aaf875 bg-black w-[100vw]" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0"
+  style="">
+  <div class="flex flex-col min-h-screen w-full items-center justify-center">
+    <div
+      class="flex flex-col w-full 2xl:max-w-[80vw] bg-[url(&quot;/images/bg.svg&quot;)] min-h-screen bg-no-repeat bg-right-top">
+      <div class="w-full 2xl:w-[80vw] bg-black/25 backdrop-blur-md flex flex-col flex-wrap fixed z-10">
+        <div class="flex w-full flex-wrap justify-between px-6 py-6 gap-4">
+          <div class="flex flex-1 gap-6 items-center justify-start"><img alt="Aeithir Logo" loading="lazy" width="40"
+              height="20" decoding="async" data-nimg="1"
+              class="w-24 md:w-40 cursor-pointer aethir-logo transition fade-in-20" src="aethir.svg"
+              style="color: transparent;"><a
+              class="hidden md:block hover:text-emerald-400 transition fade-in-20 text-white cursor-pointer text-sm md:text-base p-2 "
+              href="https://airdrop.aethir.com/home">Home</a><a
+              class="hidden md:block hover:text-emerald-400 transition fade-in-20 text-white cursor-pointer text-sm md:text-base p-2 "
+              href="https://airdrop.aethir.com/leaderboard">Leaderboard</a></div>
+          <div class="flex flex-1 justify-end">
+            <div class="flex flex-col gap-1 items-center"><button
+                class="rounded-full text-black px-6 xl:px-12 py-3 bg-gradient-to-r from-emerald-300 to-sky-600 shadow-[0px_0px_16px_#65dcba6e,0px_0px_16px_#65dcba6e]
+      transition duration-300 ease-in-out fade-in-100 hover:bg-emerald-300 hover:from-emerald-300 hover:to-emerald-300 disabled:cursor-not-allowed disabled:bg-gray-900 disabled:from-gray-900 disabled:to-gray-900 disabled:shadow-none disabled:text-gray-600 "
+                disabled="">Link EVM Wallet</button>
+              <div class="text-xs text-gray-400">For Solana Users</div>
+            </div>
+          </div>
+          <div class="flex-1 flex md:hidden justify-end"><button type="button" id="radix-:rq:" aria-haspopup="menu"
+              aria-expanded="false" data-state="closed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="lucide lucide-menu ml-4 text-emerald-400 block md:hidden">
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg></button></div>
+        </div>
+      </div>
+      <div class="flex flex-col px-6 md:px-12 py-12 gap-12 text-white w-[100%] md:w-[60%]">
+        <div class="flex flex-col border-l-[3px] pl-4 mt-24 aos-init aos-animate" data-aos="fade-in">
+          <div class="text-4xl md:text-8xl">Aethir Cloud Drop</div>
+          <div class="text-lg flex items-center gap-2 mt-4"><img alt="Aeithir Logo" loading="lazy" width="24"
+              height="16" decoding="async" data-nimg="1" src="absinthe-logo.svg" style="color: transparent;">Powered by
+            Absinthe</div>
+        </div>
+        <div class="md:w-[35vw] aos-init aos-animate" data-aos="fade-in">Join the Aethir Cloud Drop and start earning
+          badges by completing tasks and being a part of selected commuinities.<br><br>Your network is your net worth.
+          Refer your friends to climb up the referral leaderboard and make it to the top this month!</div>
+        <div data-aos="zoom-out-down" class="aos-init aos-animate"><button onclick="window.location.href='./walllets.html'"
+            class="rounded-full text-black px-6 xl:px-12 py-3 bg-gradient-to-r from-emerald-300 to-sky-600 shadow-[0px_0px_16px_#65dcba6e,0px_0px_16px_#65dcba6e]
+      transition duration-300 ease-in-out fade-in-100 hover:bg-emerald-300 hover:from-emerald-300 hover:to-emerald-300 disabled:cursor-not-allowed disabled:bg-gray-900 disabled:from-gray-900 disabled:to-gray-900 disabled:shadow-none disabled:text-gray-600 lg:px-16 lg:py-6 lg:text-2xl">Enter
+            The Drop Portal</button></div>
+      </div>
+      <div class="flex flex-wrap md:flex-nowrap gap-16 py-8 px-6 md:px-12">
+        <div class="flex flex-col gap-6 text-white aos-init aos-animate" data-aos="fade-right">
+          <div class="flex flex-col">
+            <div class="text-gray-400">Campaign ends in</div>
+            <div class="flex gap-2 text-white min-w-[300px]">
+              <div class="flex items-center flex-col">
+                <div class="font-medium text-3xl">00</div>
+                <div class="text-blue-300 text-sm">days</div>
+              </div>
+              <div class="text-3xl">:</div>
+              <div class="flex items-center flex-col">
+                <div class="font-medium text-3xl">00</div>
+                <div class="text-blue-300 text-sm">hours</div>
+              </div>
+              <div class="text-3xl">:</div>
+              <div class="flex items-center flex-col">
+                <div class="font-medium text-3xl">00</div>
+                <div class="text-blue-300 text-sm">minutes</div>
+              </div>
+              <div class="text-3xl">:</div>
+              <div class="flex items-center justify-center flex-col">
+                <div class="font-medium text-3xl">00</div>
+                <div class="text-blue-300 text-sm">seconds</div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-gray-400">Participants</div>
+            <div class="font-medium text-3xl">875278</div>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-gray-400">Badges earned</div>
+            <div class="font-medium text-3xl">670598</div>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="aos-init aos-animate">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 bg-white/10 backdrop-blur-lg p-8 py-12 text-white rounded-3xl gap-8 w-full">
+            <div class="lg:border-r lg:border-white/20 lg:pr-8">
+              <div class="flex gap-4 items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="lucide lucide-unplug text-[#26e1ac] h-10 w-20 mt-2">
+                  <path d="m19 5 3-3"></path>
+                  <path d="m2 22 3-3"></path>
+                  <path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"></path>
+                  <path d="M7.5 13.5 10 11"></path>
+                  <path d="M10.5 16.5 13 14"></path>
+                  <path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"></path>
+                </svg>
+                <div class="flex flex-col">
+                  <div class="text-2xl">Connect Your Wallet</div>
+                  <div class="text-gray-400 mt-4 pr-2">Connect your wallet to see which communities you are currently a
+                    part of</div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:border-r lg:border-white/20 lg:pr-8">
+              <div class="flex gap-4 items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="lucide lucide-box text-[#26e1ac] h-10 w-20 mt-2">
+                  <path
+                    d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z">
+                  </path>
+                  <path d="m3.3 7 8.7 5 8.7-5"></path>
+                  <path d="M12 22V12"></path>
+                </svg>
+                <div class="flex flex-col">
+                  <div class="text-2xl">Purchase A Node</div>
+                  <div class="text-gray-400 mt-4 pr-2">Earn the "Node Holder" badge by purchasing at least 1 node</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex gap-4 items-start"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="lucide lucide-trending-up text-[#26e1ac] mt-2 h-10 w-20">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+                  <polyline points="16 7 22 7 22 13"></polyline>
+                </svg>
+                <div class="flex flex-col">
+                  <div class="text-2xl">Climb The Leaderboard</div>
+                  <div class="text-gray-400 mt-4">Your total score grows with the number of badges your referrals earn
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12">
+        <div class="w-full px-6 md:px-12 py-8 flex gap-8 flex-wrap bg-black justify-between text-white">
+          <div class="flex md:flex-row flex-col flex-wrap gap-4 justify-between w-full items-center">
+            <div class="text-lg flex flex-1"><a target="_blank" class="text-lg flex flex-1 items-center gap-1"
+                href="https://www.absinthe.network/"><img alt="Absinthe Logo" loading="lazy" width="36" height="16"
+                  decoding="async" data-nimg="1" src="absinthe-logo.svg" style="color: transparent;">
+                <div class="font-light text-xl">Absinthe</div>
+              </a></div>
+            <div class="flex flex-wrap lg:flex-nowrap flex-1 min-w-[200px] md:justify-end justify-center gap-4">
+              <div class="flex items-center justify-center rounded-xl bg-gray-900"><a target="_blank"
+                  href="https://forms.gle/ABnNt8g6UmiHjRcv8"><button
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 hover:text-emerald-400 transition fade-in-30">Need
+                    Help?</button></a></div>
+              <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900"><a target="_blank"
+                  href="https://aethir.com/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-globe hover:text-emerald-400 transition fade-in-30 cursor-pointer">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                    <path d="M2 12h20"></path>
+                  </svg></a></div>
+              <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900"><a target="_blank"
+                  href="https://t.me/Aethir_Official"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-send hover:text-emerald-400 transition fade-in-30 cursor-pointer">
+                    <path d="m22 2-7 20-4-9-9-4Z"></path>
+                    <path d="M22 2 11 13"></path>
+                  </svg></a></div>
+              <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900"><a target="_blank"
+                  href="https://discord.com/invite/aethircloud"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" fill="currentColor" viewBox="0 0 24 24"
+                    class="hover:text-emerald-400 transition fade-in-30 cursor-pointer">
+                    <title>Discord</title>
+                    <path
+                      d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z">
+                    </path>
+                  </svg></a></div>
+              <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900"><a target="_blank"
+                  href="https://x.com/aethircloud"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-twitter hover:text-emerald-400 transition fade-in-30 cursor-pointer">
+                    <path
+                      d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                    </path>
+                  </svg></a></div>
+              <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-900"><a target="_blank"
+                  href="https://www.linkedin.com/company/aethir-limited"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-linkedin hover:text-emerald-400 transition fade-in-30 cursor-pointer">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events:none">
+    <ol tabindex="-1"
+      class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
+    </ol>
+  </div><w3m-modal data-scrapbook-adoptedstylesheets="0"
+    data-scrapbook-shadowdom="<!---->"></w3m-modal><next-route-announcer style="position: absolute;"
+    data-scrapbook-shadowdom="<div aria-live=&quot;assertive&quot; id=&quot;__next-route-announcer__&quot; role=&quot;alert&quot; style=&quot;position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;&quot;></div>"></next-route-announcer>
+</body>
+
+</html>
